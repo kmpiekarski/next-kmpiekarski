@@ -1,8 +1,17 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const gaId = process.env.GOOGLE_ANALYTICS_ID!
+
+// const gtm = {
+//   id: process.env.GTM_ID!,
+//   auth: process.env.GTM_AUTH!,
+//   preview: process.env.GTM_PREVIEW!,
+// }
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,6 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+      <GoogleAnalytics gaId={gaId} />
+      {/* <GoogleTagManager gtmId={gtm.id} auth={gtm.auth} preview={gtm.preview} /> */}
     </html>
   )
 }
