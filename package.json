@@ -14,6 +14,7 @@
     "contentful-cli": "^3.1.37",
     "netlify": "^13.1.11",
     "next": "14.0.3",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "react": "^18",
     "react-dom": "^18",
     "storybook": "^7.6.7"
@@ -30,9 +31,9 @@
     "@types/node": "^20",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.3",
+    "eslint-config-next": "14.1.1",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-storybook": "^0.6.15",
-    "typescript": "^5"
+    "prettier": "^3.2.5"
   }
 }
