@@ -1,5 +1,11 @@
 import Image from 'next/image'
+import type { Metadata } from 'next'
 import styles from './page.module.css'
+
+export const metadata: Metadata = {
+  title: 'Kenneth M. Piekarski',
+  description: 'Recording artist, audio engineer, software engineer.',
+}
 
 export default function Home() {
   return (
