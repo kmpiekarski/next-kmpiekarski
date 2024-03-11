@@ -7,7 +7,7 @@ const cousine = Cousine({
   subsets: ['latin'],
   variable: '--font-cousine-mono',
   display: 'swap',
-  preload: true
+  preload: true,
 })
 
 export const metadata: Metadata = {
