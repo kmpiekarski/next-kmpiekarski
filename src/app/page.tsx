@@ -31,10 +31,10 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/kmpiekarski.svg"
+          alt="K.M. Piekarski Logo"
+          width={152}
+          height={29}
           priority
         />
       </div>
