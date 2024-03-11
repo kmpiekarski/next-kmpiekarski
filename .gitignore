@@ -19,6 +19,8 @@
 # misc
 .DS_Store
 *.pem
+sitemap*
+robots*
 
 # debug
 npm-debug.log*
