@@ -1,8 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Cousine } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const cousine = Cousine({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-cousine-mono',
+  display: 'swap',
+  preload: true
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cousine.className}>{children}</body>
     </html>
   )
 }
