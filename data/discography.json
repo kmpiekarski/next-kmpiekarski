@@ -1,11 +1,46 @@
 {
   "discography": [
     {
+      "name": "Your Heart Breaks",
+      "title": "Mile by Mile",
+      "date": "2023",
+      "role": "feature vocal engineer",
+      "src": "https://yourheartbreaks.bandcamp.com/track/mile-by-mile-feat-danny-denial"
+    },
+    {
+      "name": "Cassandra Jenkins",
+      "title": "Things to You",
+      "date": "2020",
+      "role": "drum engineer",
+      "src": "https://cassandrajenkins.bandcamp.com/track/things-to-you"
+    },
+    {
+      "name": "Sheridan Riley",
+      "title": "Music for 18 Vacuumers",
+      "date": "2019",
+      "role": "Engineer",
+      "src": "https://sheridanriley.bandcamp.com/album/music-for-18-vacuumers"
+    },
+    {
       "name": "Off Off On",
       "title": "Start at the End",
       "date": "2020",
       "role": "engineer",
       "src": "https://offoffon.bandcamp.com/album/start-at-the-end"
+    },
+    {
+      "name": "Lori Goldston",
+      "title": "All Those Days, As If Spent In A Fugue State",
+      "date": "2019",
+      "role": "engineer",
+      "src": "All Those Days, As If Spent In A Fugue State"
+    },
+    {
+      "name": "Chris Looney",
+      "title": "Infamous Kitsap Ferry Riot",
+      "date": "2019",
+      "role": "engineer / producer",
+      "src": "https://vimeo.com/327380368"
     },
     {
       "name": "Slashed Tires",
