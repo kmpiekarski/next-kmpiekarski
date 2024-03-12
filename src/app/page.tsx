@@ -7,10 +7,11 @@ export default async function Home() {
   return (
     <main>
       {works.map((work: any) => (
+        // eslint-disable-line no-use-before-define
         <div key={work.sys.id}>
           <Image
             alt="placeholder"
-            className="aspect-[4/3] object-cover w-full"
+            className=""
             height="200"
             src={work.image.url}
             width="200"
