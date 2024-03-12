@@ -7,7 +7,6 @@ export default async function Home() {
   return (
     <main>
       {works.map((work: any) => (
-        // eslint-disable-line no-use-before-define
         <div key={work.sys.id}>
           <Image
             alt="placeholder"
