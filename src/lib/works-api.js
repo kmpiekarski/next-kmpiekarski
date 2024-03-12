@@ -44,16 +44,10 @@ function extractWorkEntries(fetchResponse) {
   return fetchResponse?.data?.worksCollection?.items
 }
 
-export async function getAllWorks(
-  // For this demo set the default limit to always return 3 articles.
-  limit = 3,
-  // By default this function will return published content but will provide an option to
-  // return draft content for reviewing articles before they are live
-  isDraftMode = false
-) {
+export async function getAllWorks(isDraftMode = false) {
   const articles = await fetchGraphQL(
     `query {
-        worksCollection(order: date_DESC, limit: ${limit}, preview: ${
+        worksCollection(order: date_DESC, preview: ${
           isDraftMode ? 'true' : 'false'
         }) {
           items {
