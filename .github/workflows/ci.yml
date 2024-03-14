@@ -12,18 +12,24 @@ jobs:
   build_and_lint:
     runs-on: ubuntu-latest
     steps:
-      # Checkout the code
-      - uses: actions/checkout@v4
-
-      # Set up node + npm
-      - uses: actions/setup-node@v3
-
       # Set Contentful env
+      - shell: bash
         env: 
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_PREVIEW_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_TOKEN }}
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
           CONTENTFUL_MANAGEMENT_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_TOKEN }}
+        run: |
+          export "$CONTENTFUL_SPACE_ID"
+          export "$CONTENTFUL_PREVIEW_TOKEN"
+          export "$CONTENTFUL_ACCESS_TOKEN"
+          export "$CONTENTFUL_MANAGEMENT_TOKEN
+          
+      # Checkout the code
+      - uses: actions/checkout@v4
+
+      # Set up node + npm
+      - uses: actions/setup-node@v3
 
       # Install packages
       - name: NPM install
