@@ -1,28 +1,35 @@
 import Image from 'next/image'
-import styles from './page.module.css'
-import Works from './components/works/works'
-import { promises as fs } from 'fs'
+import Link from 'next/link'
+import { getAllWorks } from '@/lib/works-api'
 
 export default async function Home() {
-  const file = await fs.readFile(
-    process.cwd() + '/data/discography.json',
-    'utf8'
-  )
-  const data = JSON.parse(file)
-
+  const works = await getAllWorks()
   return (
-    <main className={styles.main}>
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/kmpiekarski.svg"
-          alt="K.M. Piekarski Logo"
-          width={152}
-          height={29}
-          priority
-        />
-      </div>
-      <Works {...data.discography} />
+    <main>
+      {works.map((work: any) => (
+        <div key={work.sys.id}>
+          <Image
+            alt="placeholder"
+            className=""
+            height="200"
+            src={work.image.url}
+            width="200"
+          />
+          <pre>
+            <Link href={work.link}>{work.title}</Link>
+          </pre>
+          <pre>
+            <Link href={work.link}>{work.name}</Link>
+          </pre>
+
+          <pre>{work.type}</pre>
+          <pre>{work.link}</pre>
+          <pre>{work.role}</pre>
+          <pre>{work.date}</pre>
+          <pre>{work.category}</pre>
+          <pre>{work.ageLimit}</pre>
+        </div>
+      ))}
     </main>
   )
 }
