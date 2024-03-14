@@ -1,4 +1,5 @@
 name: Core CI workflow
+
 on:
   pull_request:
     # Run this every time a pull request is opened, reopened, or new commits
@@ -8,10 +9,15 @@ on:
     # Run this every time a commit goes to main
     branches: [main]
 
+env: 
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  CONTENTFUL_PREVIEW_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_TOKEN }}
+  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+  CONTENTFUL_MANAGEMENT_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_TOKEN }}
 jobs:
   build_and_lint:
     runs-on: ubuntu-latest
-    steps:
+    steps:          
       # Checkout the code
       - uses: actions/checkout@v4
 
