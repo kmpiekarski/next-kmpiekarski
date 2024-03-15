@@ -13,6 +13,7 @@
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "dependencies": {
+    "@apollo/client": "^3.9.7",
     "contentful-cli": "^3.1.37",
     "netlify": "^13.1.11",
     "next": "14.0.3",
