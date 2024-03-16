@@ -1,0 +1,13 @@
+{
+  "extension": [
+    "GraphQL.vscode-graphql",
+    "ms-azuretools.vscode-docker",
+    "dbaeumer.vscode-eslint",
+    "GraphQL.vscode-graphql-syntax",
+    "unifiedjs.vscode-mdx",
+    "esbenp.prettier-vscode",
+    "Orta.vscode-react-native-storybooks",
+    "github.vscode-github-actions",
+    ""
+  ]
+}
