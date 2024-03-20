@@ -1,0 +1,11 @@
+query Launches {
+  launches {
+    id
+    details
+    mission_name
+    rocket {
+      rocket_name
+      rocket_type
+    }
+  }
+}
