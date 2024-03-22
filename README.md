@@ -1,3 +1,7 @@
+![workflow](https://github.com/kmpiekarski/react-kmpiekarski/actions/workflows/ci.yml/badge.svg?event=push)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/70335938-a96e-4fcb-b416-c0284871169d/deploy-status)](https://app.netlify.com/sites/kmpiekarski/deploys)
+
+
 # KMPiekarski Portfolio Website
 
 Welcome to my ongoing portfolio project.
