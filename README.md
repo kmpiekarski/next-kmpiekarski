@@ -2,9 +2,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/70335938-a96e-4fcb-b416-c0284871169d/deploy-status)](https://app.netlify.com/sites/kmpiekarski/deploys)
 
 
-# KMPiekarski Portfolio Website
+# Portfolio Website
 
-Welcome to my ongoing portfolio project.
+Welcome to this ongoing portfolio project.
 
 This project is built with:
 
@@ -13,6 +13,7 @@ This project is built with:
 - [TypeScript](https://www.typescriptlang.org/)
 - [styled components](https://www.styled-components.com/)
 - [Contentful](https://contentful.com)
+- [Storybook](https://storybook.js.org/)
 
 The site is hosted in Netlify on the domain [kmpiekarski.netlify.app](https://kmpiekarski.netlify.app) and utilizes GitHub Actions for CI.
 
