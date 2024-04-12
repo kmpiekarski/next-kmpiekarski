@@ -8,6 +8,5 @@
   "eslint.format.enable": true,
   "explorer.confirmDragAndDrop": false,
   "prettier.configPath": ".prettierrc",
-  "prettier.ignorePath": ".prettierignore",
-  "window.zoomLevel": -1
+  "prettier.ignorePath": ".prettierignore"
 }
