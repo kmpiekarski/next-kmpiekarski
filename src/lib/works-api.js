@@ -1,4 +1,4 @@
-// Set a variable that contains all the fields needed for articles when a fetch for
+// Set a variable that contains all the fields needed for works when a fetch for
 // content is performed
 const WORKS_GRAPHQL_FIELDS = `
   sys {
@@ -33,9 +33,9 @@ async function fetchGraphQL(query, preview = false) {
         }`,
       },
       body: JSON.stringify({ query }),
-      // Associate all fetches for articles with an "articles" cache tag so content can
+      // Associate all fetches for works with an "works" cache tag so content can
       // be revalidated or updated from Contentful on publish
-      next: { tags: ['articles'] },
+      next: { tags: ['works'] },
     }
   ).then((response) => response.json())
 }
@@ -45,7 +45,7 @@ function extractWorkEntries(fetchResponse) {
 }
 
 export async function getAllWorks(isDraftMode = false) {
-  const articles = await fetchGraphQL(
+  const works = await fetchGraphQL(
     `query {
         worksCollection(order: date_DESC, preview: ${
           isDraftMode ? 'true' : 'false'
@@ -57,11 +57,11 @@ export async function getAllWorks(isDraftMode = false) {
       }`,
     isDraftMode
   )
-  return extractWorkEntries(articles)
+  return extractWorkEntries(works)
 }
 
 export async function getWork(isDraftMode = false) {
-  const article = await fetchGraphQL(
+  const work = await fetchGraphQL(
     `query {
         worksCollection(where:{limit: 1, preview: ${
           isDraftMode ? 'true' : 'false'
@@ -73,5 +73,5 @@ export async function getWork(isDraftMode = false) {
       }`,
     isDraftMode
   )
-  return extractWorkEntries(article)[0]
+  return extractWorkEntries(work)[0]
 }
