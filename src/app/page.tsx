@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { getAllWorks } from '@/lib/works-api'
+import { getAllWorks } from '@/lib/discography-api'
 
 export default async function Home() {
   const works = await getAllWorks()

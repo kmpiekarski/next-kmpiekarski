@@ -1,0 +1,16 @@
+query Videography {
+  worksCollection(where: { category: "Videography" }, order: date_DESC) {
+    items {
+      sys {
+        id
+      }
+      title
+      date
+      category
+      name
+      role
+      link
+      type
+    }
+  }
+}
