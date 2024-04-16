@@ -47,7 +47,7 @@ function extractWorkEntries(fetchResponse) {
 export async function getAllWorks(isDraftMode = false) {
   const works = await fetchGraphQL(
     `query {
-        worksCollection(order: date_DESC, preview: ${
+        worksCollection(where:{ category: "Discography" }, order: date_DESC, preview: ${
           isDraftMode ? 'true' : 'false'
         }) {
           items {
@@ -63,7 +63,7 @@ export async function getAllWorks(isDraftMode = false) {
 export async function getWork(isDraftMode = false) {
   const work = await fetchGraphQL(
     `query {
-        worksCollection(where:{, preview: ${isDraftMode ? 'true' : 'false'}) {
+        worksCollection(where:{ category: "Discography" }, order: date_DESC, {preview: ${isDraftMode ? 'true' : 'false'}) {
           items {
             ${WORKS_GRAPHQL_FIELDS}
           }

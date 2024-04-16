@@ -1,0 +1,19 @@
+query Discography {
+  worksCollection(where: { category: "Discography" }, order: date_DESC) {
+    items {
+      sys {
+        id
+      }
+      title
+      image {
+        url
+      }
+      date
+      category
+      name
+      role
+      link
+      type
+    }
+  }
+}
