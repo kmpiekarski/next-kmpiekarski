@@ -1,42 +1,50 @@
-'use client'
-
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Link from 'next/link'
-// import Image from "next/image"
+import Image from 'next/image'
+import { getAllWorks } from '@/lib/discography-api'
 
-export default function ListWorks(works) {
-  console.log(works)
-  const listItems = works.map((work: any) => {
-    ;<Item>
-      {/* <Image src={work.image} alt={work.alt} wiLabelh={250} height={250} /> */}
-      <Link href={works.src}>
-        <Name>{work.name}</Name>
+const discography = getAllWorks
+
+interface Work {
+  sys: { id: number }
+  ageLimit: boolean
+  date: number
+  image: { url: string }
+  link: string
+  name: string
+  role: string
+  title: string
+  type: string
+}
+
+export default function Discography() {
+  // props.map((work: any) => {
+  const items = discography.map(props: Work => 
+    <Item key={props.sys.id}>
+      <Image src={props.image.url} alt={props.alt} width={200} height={200} />
+      <Link href={props.link}>
+        <Name>{props.name}</Name>
         <List>
+          <div>{props.type}</div>
           <div>
-            <Title>{work.title}</Title>
+            <Title>{props.title}</Title>
             <Label>Year</Label>
-            <Note>{work.date}</Note>
+            <Note>{props.date}</Note>
           </div>
           <div>
             <Label>Role</Label>
-            <Note>{work.role}</Note>
+            <Note>{props.role}</Note>
           </div>
           <div>
             <Label>Year</Label>
-            <Note>{work.year}</Note>
+            <Note>{props.year}</Note>
           </div>
         </List>
       </Link>
     </Item>
-  })
-
-  return <UnorderedList>{listItems}</UnorderedList>
-}
-
-ListWorks.propTypes = {
-  works: PropTypes.array.isRequired,
+  )
+  return ()
 }
 
 const Wrapper = styled.div`
