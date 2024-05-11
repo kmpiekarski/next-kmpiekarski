@@ -1,6 +1,7 @@
 {
-  "name": "react-kmpiekarski",
-  "version": "0.1.0",
+  "name": "next-kmpiekarski",
+  "version": "1.0.0",
+  "description": "",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,15 +13,22 @@
     "build-storybook": "storybook build",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
+  "keywords": [],
+  "author": "Kenneth M. Piekarski",
   "dependencies": {
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/react-loader": "^1.9.17",
     "contentful-cli": "^3.1.37",
     "netlify": "^13.1.11",
-    "next": "14.0.3",
+    "next": "^14.2.3",
+    "next-sanity": "^9.0.15",
     "next-sitemap": "^4.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sanity": "^3.40.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.3",
     "@storybook/addon-essentials": "^7.6.1",
     "@storybook/addon-interactions": "^7.6.1",
     "@storybook/addon-links": "^7.6.1",
@@ -34,6 +42,9 @@
     "@types/react-dom": "^18",
     "eslint-config-next": "14.1.1",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
     "eslint-plugin-storybook": "^0.6.15",
     "onchange": "^7.1.0",
     "prettier": "^3.2.5",
