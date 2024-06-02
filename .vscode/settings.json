@@ -7,6 +7,7 @@
   "editor.tabSize": 2,
   "eslint.format.enable": true,
   "explorer.confirmDragAndDrop": false,
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "/Applications/Firefox Developer Edition.app",
   "prettier.configPath": ".prettierrc",
   "prettier.ignorePath": ".prettierignore",
   "window.zoomLevel": -1
