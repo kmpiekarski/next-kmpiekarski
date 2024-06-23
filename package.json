@@ -10,7 +10,10 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
+    "check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "contentful-cli": "^3.1.37",
@@ -36,12 +39,15 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
+    "autoprefixer": "^10.0.1",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-json": "^4.0.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "husky": "^9.0.11",
     "onchange": "^7.1.0",
+    "postcss": "^8",
     "prettier": "^3.2.5",
     "storybook": "^8.1.10",
     "typescript": "^5"
