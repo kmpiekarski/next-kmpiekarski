@@ -1,7 +1,6 @@
 ![workflow](https://github.com/kmpiekarski/react-kmpiekarski/actions/workflows/ci.yml/badge.svg?event=push)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/70335938-a96e-4fcb-b416-c0284871169d/deploy-status)](https://app.netlify.com/sites/kmpiekarski/deploys)
 
-
 # Portfolio Website
 
 Welcome to this ongoing portfolio project.
@@ -23,7 +22,6 @@ To run this site on `localhost:3000` follow these steps
 
 ```
 npm install
-npm run build
 npm run dev
 ```
 
