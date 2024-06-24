@@ -22,7 +22,6 @@ To run this site on [localhost:3000](http://localhost:3000) follow these steps
 
 ```
 npm install
-npm run build
 npm run dev
 ```
 
