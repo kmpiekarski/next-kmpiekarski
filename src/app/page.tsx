@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { getAllWorks } from '@/lib/works-api'
-
 interface Work {
   link: string
   title: string
