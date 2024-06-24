@@ -3,7 +3,6 @@ import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 
 import { schemaTypes } from './src/schemaTypes'
-import { defaultDocumentNode, structure } from './src/structure'
 
 export default defineConfig({
   name: 'default',
@@ -12,7 +11,7 @@ export default defineConfig({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
   dataset: 'production',
 
-  plugins: [structureTool({ structure, defaultDocumentNode }), visionTool()],
+  plugins: [visionTool()],
 
   schema: {
     types: schemaTypes,
