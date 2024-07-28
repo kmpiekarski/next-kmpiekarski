@@ -11,31 +11,40 @@ This project is built with:
 - [Nextjs](https://nextjs.org/learn/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [styled components](https://www.styled-components.com/)
-- [Contentful](https://contentful.com)
+- [Sanity](https://sanity.io)
 - [Storybook](https://storybook.js.org/)
 
 The site is hosted in Netlify on the domain [kmpiekarski.netlify.app](https://kmpiekarski.netlify.app) and utilizes GitHub Actions for CI.
 
 ## Staring the App
 
-To run this site on `localhost:3000` follow these steps
+To run this site on [localhost:3000](http://localhost:3000) follow these steps
 
 ```
 npm install
 npm run dev
 ```
 
-Then you will need to open [localhost:3000](http://localhost:3000) in your browser. Shut this down with `ctrl/control` + `c`.
+To run Sanity Studio locally on [localhost:3333](http://localhost:3333)
+
+```
+npm run sanity-dev
+```
+
+To deploy Sanity schemas to Sanity Studio
+
+```
+npm run sanity-deploy
+```
 
 ## Local .ENV file
 
 You will need to create `env.local` in the root directory, where you will set your varables to access the Contentful workspace.
 
 ```
-CONTENTFUL_SPACE_ID="_________"
-CONTENTFUL_PREVIEW_TOKEN="_________"
-CONTENTFUL_ACCESS_TOKEN="_________"
-CONTENTFUL_MANAGEMENT_TOKEN="_________"
+NEXT_PUBLIC_SANITY_PROJECT_ID="_________"
+NEXT_PUBLIC_SANITY_DATASET="_________"
+NEXT_PUBLIC_SANITY_API_VERSION="_________"
 ```
 
 Secret keys to authorize its connection with Contentful are set in this GitHub repository as a _repository secret_ in GitHub. This is critical to ensure the CI build will not fail while _linting_. You will have to also [set these in Netlify](https://docs.netlify.com/environment-variables/overview/) or whatever service intend to use.

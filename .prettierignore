@@ -3,3 +3,4 @@ build
 coverage
 workflows
 package.json
+.eslintrc.json

@@ -1,6 +1,9 @@
 {
   "name": "next-kmpiekarski",
-  "version": "0.1.0",
+  "author": "Kenneth M. Piekarski",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
   "private": true,
   "scripts": {
     "build": "next build",
@@ -8,6 +11,8 @@
     "lint": "next lint",
     "postbuild": "next-sitemap",
     "start": "next start",
+    "sanity-dev": "sanity dev",
+    "sanity-deploy": "sanity deploy",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
@@ -31,12 +36,20 @@
     ]
   },
   "dependencies": {
+    "@sanity/client": "^6.18.0",
+    "@sanity/eslint-config-studio": "^4.0.0",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/react-loader": "^1.9.17",
+    "@sanity/vision": "^3.45.0",
     "contentful-cli": "^3.1.37",
     "netlify": "^13.1.11",
     "next": "^14.2.4",
+    "next-sanity": "^9.3.10",
     "next-sitemap": "^4.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sanity": "^3.45.0",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
@@ -59,6 +72,8 @@
     "eslint-config-next": "14.2.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-json": "^4.0.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
